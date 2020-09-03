@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'list.dart';
 
+// Errors - Dont use  ListTile here as if used it will cause problem as ReorderableListView wants a key and using
+// I tried using ListTile inside List.generate() but it  gave huge error as material widget not found because then
+// you are not able to add key for the ReorderableListView
+
+// Create functions annd use them using infoList otherwise you will get errors inside  consumer widget as 'getter
+//returned null value'
+
+// Pass the DoubleTap function as a constructor value otherwise no way to use it
 void main() {
   // runApp(MyApp());
   runApp(
